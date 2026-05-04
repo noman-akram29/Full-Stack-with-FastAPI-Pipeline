@@ -1,9 +1,5 @@
 # Full Stack FastAPI Template
 
-<a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3A%22Test+Docker+Compose%22" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test%20Docker%20Compose/badge.svg" alt="Test Docker Compose"></a>
-<a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3A%22Test+Backend%22" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test%20Backend/badge.svg" alt="Test Backend"></a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/full-stack-fastapi-template" target="_blank"><img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/full-stack-fastapi-template.svg" alt="Coverage"></a>
-
 ## Technology Stack and Features
 
 - ⚡ [**FastAPI**](https://fastapi.tiangolo.com) for the Python backend API.
@@ -16,35 +12,43 @@
   - 🤖 An automatically generated frontend client.
   - 🧪 [Playwright](https://playwright.dev) for End-to-End testing.
   - 🦇 Dark mode support.
-- 🐋 [Docker Compose](https://www.docker.com) for development and production.
+- 🐋 [Docker](https://www.docker.com) for development and production.
 - 🔒 Secure password hashing by default.
 - 🔑 JWT (JSON Web Token) authentication.
 - 📫 Email based password recovery.
 - 📬 [Mailcatcher](https://mailcatcher.me) for local email testing during development.
 - ✅ Tests with [Pytest](https://pytest.org).
 - 📞 [Traefik](https://traefik.io) as a reverse proxy / load balancer.
-- 🚢 Deployment instructions using Docker Compose, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
+- 🚢 Deployment instructions using Docker, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
 - 🏭 CI (continuous integration) and CD (continuous deployment) based on GitHub Actions.
 
 ### Dashboard Login
 
-[![API docs](img/login.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![API docs](img/login-page.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
 
 ### Dashboard - Admin
 
-[![API docs](img/dashboard.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![API docs](img/dashboard-admin.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
 
 ### Dashboard - Items
 
-[![API docs](img/dashboard-items.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![API docs](img/dashboard-items.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
 
-### Dashboard - Dark Mode
+### Dashboard - Light Mode
 
-[![API docs](img/dashboard-dark.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![API docs](img/dashboard-admin-light.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
 
 ### Interactive API Documentation
 
-[![API docs](img/docs.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![API docs](img/api-docs.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
+
+### Adminer Databases UI
+
+[![Adminer UI DB](img/adminer-db-ui.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
+
+### Traefik Routing Dashboard
+
+[![Traefik Dashboard](img/traefik.png)](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git)
 
 ## How To Use It
 
@@ -175,16 +179,16 @@ Decide a name for your new project's directory, you will use it below. For examp
 Go to the directory that will be the parent of your project, and run the command with your project's name:
 
 ```bash
-copier copy https://github.com/fastapi/full-stack-fastapi-template my-awesome-project --trust
+copier copy https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git my-awesome-project --trust
 ```
 
 If you have `pipx` and you didn't install `copier`, you can run it directly:
 
 ```bash
-pipx run copier copy https://github.com/fastapi/full-stack-fastapi-template my-awesome-project --trust
+pipx run copier copy https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git my-awesome-project --trust
 ```
 
-**Note** the `--trust` option is necessary to be able to execute a [post-creation script](https://github.com/fastapi/full-stack-fastapi-template/blob/master/.copier/update_dotenv.py) that updates your `.env` files.
+**Note** the `--trust` option is necessary to be able to execute a [post-creation script](https://github.com/noman-akram29/Full-Stack-with-FastAPI-Pipeline.git/blob/master/.copier/update_dotenv.py) that updates your `.env` files.
 
 ### Input Variables
 
