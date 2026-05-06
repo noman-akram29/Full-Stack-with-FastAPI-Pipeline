@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: fastapi-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: nomanakram29/fastapi-backend:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: POSTGRES_SERVER
+              value: postgres
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: db
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: password
+            - name: PROJECT_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: project_name
+            - name: FIRST_SUPERUSER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: first_superuser
+            - name: FIRST_SUPERUSER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: first_superuser_password
+            - name: BACKEND_CORS_ORIGINS
+              value: http://dashboard.localhost:8080
+          readinessProbe:
+            httpGet:
+              path: /api/v1/utils/health-check/
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /api/v1/utils/health-check/
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+
